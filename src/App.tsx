@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import WebApp from '@twa-dev/sdk'
+
+WebApp.expand();
 
 function App() {
   const [cryptoPrice, setCryptoPrice] = useState(1000);
@@ -54,10 +57,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Price: €{cryptoPrice.toFixed(2)}</p>
-        <button onClick={buyCrypto}>Buy</button>
-        <button onClick={sellCrypto}>Sell</button>
-        <p>EUR Balance: ${eurBalance.toFixed(2)}</p>
-        <p>Crypto Balance: {cryptoBalance.toFixed(4)}</p>
+        <p>EUR: €{eurBalance.toFixed(2)}</p>
+        <p>Crypto: {cryptoBalance.toFixed(4)}</p>
+        <div className="button-group">
+          <button onClick={buyCrypto}>Buy</button>
+          <button onClick={sellCrypto}>Sell</button>
+        </div>
       </header>
     </div>
   );

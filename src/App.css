@@ -19,6 +19,14 @@
 
 .App-header {
   min-width: 300px;
+  font-size: 28px;
+}
+
+.button-group {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 button {
@@ -27,9 +35,10 @@ button {
   border-radius: 5px;
   padding: 10px 20px;
   margin: 10px;
-  font-size: 16px;
+  font-size: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
